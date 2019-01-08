@@ -1,0 +1,7 @@
+.btn-currency {
+  background: dodgerblue;
+}
+
+.btn-currency.active {
+  background: darkblue;
+}
