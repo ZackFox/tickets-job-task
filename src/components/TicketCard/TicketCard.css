@@ -1,5 +1,158 @@
 .ticket-card {
-  border: 1px solid #ccc;
+  display: flex;
+  background: #fff;
+  color: #424242;
+  border: 2px solid #ccd2da;
+  border-radius: 8px;
   margin-bottom: 10px;
-  padding: 10px;
+  box-shadow: 0px 5px 15px 0px transparent;
+  transition: 0.4s;
+}
+
+.ticket-card:hover {
+  box-shadow: 0px 7px 10px 0px #cdd1dc;
+}
+
+.ticket-purchase {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+}
+
+.ticket-purchase .avia-logo {
+  width: 180px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.avia-logo img {
+  width: 100%;
+}
+
+.ticket-purchase .btn-buy {
+  display: inline-block;
+  width: 175px;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  background: #ff7c00;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-buy span:nth-child(1) {
+  display: block;
+}
+
+.btn-buy:hover {
+  background: #ff882a;
+}
+
+.ticket-info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.ticket-info-origin,
+.ticket-info-dest {
+  padding: 0 20px;
+}
+
+.ticket-info-dest {
+  text-align: right;
+}
+
+.ticket-info-stops {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ticket-info-stops::after {
+  content: "\2708";
+  position: absolute;
+  color: #ccc;
+  top: 15px;
+  right: 0;
+  font-size: 27px;
+}
+
+.ticket-info-stops::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 30px;
+  top: 35px;
+  border-bottom: 1px solid #ccc;
+}
+
+.ticket-time {
+  font-size: 30px;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+.ticket-location {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.ticket-date {
+  color: #a7a6a6;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1050px) {
+  .ticket-card {
+    flex-direction: column-reverse;
+  }
+  .ticket-purchase {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .ticket-card {
+    align-items: center;
+  }
+  .ticket-info {
+    flex-direction: column;
+  }
+  .ticket-purchase {
+    flex-direction: column;
+  }
+  .ticket-purchase .avia-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ticket-purchase .btn-buy {
+    margin: 0 auto;
+  }
+  .ticket-info-stops {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .ticket-info-dest {
+    text-align: left;
+  }
+  .ticket-time {
+    font-size: 50px;
+    line-height: 40px;
+  }
+  .ticket-location,
+  .ticket-date {
+    font-size: 20px;
+  }
 }

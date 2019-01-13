@@ -11,14 +11,16 @@ const StopsCheckbox = ({ children, stops, checkedStops, checkStops }) => {
   };
 
   return (
-    <label htmlFor={`stops_${stops}`} className="stops-checkbox">
+    <label htmlFor={`stops_${stops}`} className="stops-checker">
       <input
         type="checkbox"
         id={`stops_${stops}`}
+        className="checkbox"
         checked={checkedStops[stops]}
         onChange={checkHandler}
       />
-      <span>{children}</span>
+      <span className="checkbox-proxy" />
+      <span className="checkbox-title">{children}</span>
     </label>
   );
 };

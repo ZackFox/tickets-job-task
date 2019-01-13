@@ -1,7 +1,47 @@
-.btn-currency {
-  background: dodgerblue;
+.stops-checker {
+  display: block;
+  padding: 5px 12px;
 }
 
-.btn-currency.active {
-  background: darkblue;
+.stops-checker:hover {
+  background: #f3fbfd;
+  cursor: pointer;
+}
+
+.stops-checker .checkbox {
+  display: none;
+}
+
+.checkbox-proxy {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 12px;
+  vertical-align: middle;
+  border: 2px solid #ccc;
+}
+
+.checkbox-proxy::before {
+  content: "\2713";
+  display: none;
+  text-align: center;
+  line-height: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #47a6f3;
+}
+
+.checkbox:checked ~ .checkbox-proxy {
+  border-color: #47a6f3;
+}
+
+.checkbox:checked ~ .checkbox-proxy::before {
+  display: block;
+}
+
+.checkbox-title {
+  line-height: 16px;
+  font-size: 16px;
+  vertical-align: middle;
 }

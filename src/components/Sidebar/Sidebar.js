@@ -6,13 +6,13 @@ import StopsCheckbox from "../StopsCheckbox/StopsCheckbox";
 const Sidebar = () => {
   return (
     <aside className="sidebar">
-      <div className="currency-group">
+      <div className="sidebar-group currency-group">
         <div className="group-title">Валюта</div>
         <CurrencyButton currencyName="rub">RUB</CurrencyButton>
         <CurrencyButton currencyName="usd">USD</CurrencyButton>
         <CurrencyButton currencyName="eur">EUR</CurrencyButton>
       </div>
-      <div className="stops-group">
+      <div className="sidebar-group stops-group">
         <div className="group-title">Количество пересадок</div>
         <StopsCheckbox stops={0}>Без пересадок</StopsCheckbox>
         <StopsCheckbox stops={1}>1 пересадка</StopsCheckbox>

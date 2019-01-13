@@ -1,7 +1,31 @@
 .btn-currency {
-  background: dodgerblue;
+  color: #47a6f3;
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+}
+
+.btn-currency:nth-of-type(1) {
+  border-right-color: transparent;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.btn-currency:last-child {
+  border-left-color: transparent;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn-currency:hover {
+  background: #f3fbfd;
+  border: 1px solid #47a6f3;
+  cursor: pointer;
 }
 
 .btn-currency.active {
-  background: darkblue;
+  background: #47a6f3;
+  border: 1px solid #47a6f3;
+  color: #fff;
 }

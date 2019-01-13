@@ -1,0 +1,40 @@
+.sidebar {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #e2e9f3;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.group-title {
+  text-align-last: left;
+  text-transform: uppercase;
+  padding: 14px 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebar-group {
+  margin-bottom: 20px;
+}
+
+.currency-group {
+  text-align: center;
+}
+
+@media only screen and (max-width: 710px) {
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .sidebar {
+    flex-direction: column;
+  }
+}
