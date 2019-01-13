@@ -9,6 +9,10 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
+          <header className="header">
+            <h2>Tickets App</h2>
+            <a href="https://github.com/ZackFox/tickets-job-task">Repository</a>
+          </header>
           <div className="flex-container">
             <Sidebar />
             <FilteredList />

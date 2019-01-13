@@ -5,13 +5,18 @@ import "./TicketCard.css";
 import tk from "./TK.png";
 
 export default ({ ticket, activeCurrency }) => {
+  const onBuy = event => {
+    event.preventDefault();
+    alert("Билет куплен!");
+  };
+
   return (
     <div className="ticket-card">
       <div className="ticket-purchase">
         <div className="avia-logo">
           <img src={tk} alt={ticket.carrier} />
         </div>
-        <a href="/" className="btn btn-buy">
+        <a href="/" className="btn btn-buy" onClick={onBuy}>
           <span>Купить</span>
           <span>зa </span>
           <span>{setPriceByCurrency(ticket.price, activeCurrency)}</span>
